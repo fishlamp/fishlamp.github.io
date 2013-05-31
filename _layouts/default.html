@@ -41,7 +41,7 @@
   <body>
 <div class="page-footer">Copyright (c) 2013 <a href="http://fishlamp.com">FishLamp</a>. <a href="http://r33b.net">All glory to the hypnotoad.</a>
 	</div>
-
+<!-- navbar-inverse -->
         <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -56,13 +56,10 @@
  -->
           <div class="nav-collapse collapse">
             <ul class="nav" id="main-nav">
-	             <li class="divider-vertical"></li>
+	            <li class="divider-vertical"></li>
 				<li><a href="/index.html">Home</a></li>
                 
-
-
                 <li class="divider-vertical"></li>
-                
                 <li class="dropdown">
                     
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -126,7 +123,6 @@
 
 
                 <li class="divider-vertical"></li>
-
                 <li class="dropdown">
                     
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -144,8 +140,11 @@
                 </li>
 
                 <li class="divider-vertical"></li>
+				<li><a href="http://code.fishlamp.com">Code</a></li>
                 
 
+
+<!--                 <li class="divider-vertical"></li> -->
 <!-- TODO add search... -->
 <!-- 
 
@@ -153,7 +152,7 @@
   <input type="text" class="search-query" placeholder="Search">
 </form>
  -->
-                <li class="divider-vertical"></li>
+<!--                 <li class="divider-vertical"></li> -->
                 
             </ul>
 
@@ -168,8 +167,19 @@
 	<div class="row">
 			<div class="span8">
 				<div class="page">
-					<div class="page-title">{{ page.title }}</div>      
-					<div class="page-content">{{ content }}</div>
+					<div class="page-title">
+						{{ page.title }}
+					</div>	      
+						      
+					<div class="page-content">
+						<div class="source-link">
+							<a href="http://code.fishlamp.com">
+								<img src="/assets/images/blacktocat-32.png" title="Go to the code repository"></img>
+							</a>
+						</div>
+						
+						{{ content }}
+					</div>
 			   </div>
 			</div>
 	</div>
@@ -190,8 +200,8 @@
 <!--     <script src="/assets/bootstrap/js/bootstrap-tab.js"></script> -->
 <!--     <script src="/assets/bootstrap/js/bootstrap-tooltip.js"></script> -->
 <!--     <script src="/assets/bootstrap/js/bootstrap-popover.js"></script> -->
-<!--     <script src="/assets/bootstrap/js/bootstrap-button.js"></script> -->
-<!--     <script src="/assets/bootstrap/js/bootstrap-collapse.js"></script> -->
+    <script src="/assets/bootstrap/js/bootstrap-button.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap-collapse.js"></script>
 <!--     <script src="/assets/bootstrap/js/bootstrap-carousel.js"></script> -->
 <!--     <script src="/assets/bootstrap/js/bootstrap-typeahead.js"></script> -->
   </body>
