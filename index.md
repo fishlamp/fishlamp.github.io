@@ -11,13 +11,12 @@ This is the help site for the FishLamp SDK.
 
 ###General Information 
 
-- [Overview](/pages/overview/overview.html)
-- [Topology](/pages/overview/topology.html)
+- [File and Folder Organization](/organization.html)
 
 ###About the source code
 
-- [Overview](/pages/classes/overview.html)
-- [Topology](/pages/classes/topology.html)
+- [Overview](/code.html)
+- [Topology](/files.html)
 
 ###About the tools
 

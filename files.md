@@ -24,10 +24,6 @@ Abstractions and implementations for UI related stuff that is either not specifi
 
 Individual libraries for individual webservices, like Twitter and Facebook
 
-###External and Dependecies
-
-Code brought in from elsewhere. These need to be combined into one. 
-
 ###OSX
 
 Code only for running on OS X. Most UI, some other stuff like a NSTask abstraction.
@@ -36,11 +32,10 @@ Code only for running on OS X. Most UI, some other stuff like a NSTask abstracti
 
 Code only for running on iOS.
 
-###XCodePlugin
-
-An experiment for abstracting a easy interface for making Xcode plugins. 
-
 ###Animation
 
 An experiment for add cocos2d support to view controllers for use in apps not totally built using cocos2d.
 
+###Code Generator
+
+Code that generates code. Actually it's code that generates code that generates code. I know - your head exploded. Sorry about that.

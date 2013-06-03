@@ -4,8 +4,8 @@ title: FishLamp Overview
 ---
 
 Frameworks:
-1. [Core](/docs/FishLampCore.html)
-2. [Cocoa](/docs/cocoa.html)
+1. [Core](/core.html)
+2. [Cocoa](/cocoa.html)
 3. Compatibility
 4. CocoaUI
 5. Connect

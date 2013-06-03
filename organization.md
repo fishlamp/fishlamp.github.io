@@ -23,7 +23,7 @@ This is a plist that has the current version of the framework in it. This will b
 
 ###Classes
 
-This is where all the source code lives. See the organization for this folder [here](pages/code/topology.html).
+This is where all the source code lives. See the organization for this folder [here](/files.html).
 
 ###Experimental
 
@@ -39,11 +39,11 @@ Images and nib files. These need a better place to live.
 
 ###Tools
 
-Source code for the tools and scripts. See the tools section [here](/pages/tools/overview.html).
+Source code for the tools and scripts. See the tools section [here](/tools.html).
 
 ###XcodeSupport
 
-Stuff for Xcode. Lots of scripts, config files, and projects. For more information go [here](/pages/tools/xcode.html).
+Stuff for Xcode. Lots of scripts, config files, and projects. For more information go [here](/xcode.html).
 
 ###Submodules
 
