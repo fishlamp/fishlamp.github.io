@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Whittle - FishLamp</title>
+  <title>Tools - FishLamp</title>
   <meta name="author" content="FishLamp">
 
   
-  <meta name="description" content="Whittle Jun 22nd, 2013 Whittle is a command line tool that generates code. It takes input files in either JSON or XML and outputs objective-c code. &hellip;">
+  <meta name="description" content="Tools Jun 22nd, 2013 PackMule is the cocoa App for generating code. Whittle is the command line tool for generating code (on Mac OS X). Recent Posts &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://fishlamp.github.io/whittle.html">
+  <link rel="canonical" href="http://fishlamp.github.io/tools">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="FishLamp" type="application/atom+xml">
@@ -57,11 +57,11 @@
   
 <ul class="main-navigation">
   <li><a href="/">Home</a></li>
-  <li><a href="/about.html">About</a></li>
-  <li><a href="/tools.html">Tools</a></li>
-  <li><a href="/project.html">Project</a></li>
+  <li><a href="/about/">About</a></li>
+  <li><a href="/tools/">Tools</a></li>
+  <li><a href="/project/">Project</a></li>
   <li><a href="/help/">Help</a></li>
-  <li><a href="/contact.html">Contact</a></li>
+  <li><a href="/contact/">Contact</a></li>
   <li><a href="/blog/">Blog</a></li>
   <li><a href="http://github.com/fishlamp/FishLamp">Code</a></li>
   <li><a href="/blog/archives">Archives</a></li>
@@ -74,7 +74,7 @@
 <article role="article">
   
   <header>
-    <h1 class="entry-title">Whittle</h1>
+    <h1 class="entry-title">Tools</h1>
     <p class="meta">
 
 
@@ -90,25 +90,9 @@
 <time datetime="2013-06-22T14:05:00-07:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2013</time></p>
   </header>
   
-  <p>Whittle is a command line tool that generates code. It takes input files in either JSON or XML and outputs objective-c code. It is designed primarily to generate code that can be used with the object model abstraction in the framework. Since it is a command line tool, it makes it easy to automate code generation especially in large projects.</p>
+  <p><a href="/packmule.html">PackMule</a> is the cocoa App for generating code.</p>
 
-<p><a href="/packmule.html">PackMule</a> is the Cocoa app for editing the project files individually.</p>
-
-<p>Model objects in FishLamp can be saved to structured storage on the device, or serialized over the network (TCP, HTTP, JSON, XML, SOAP) etc.</p>
-
-<p>Input files are in the FishLamp project format (flproj), see a screenshot below showing one of these files (a test file). Project files describe one or more objects, enumerations, and can import other project files. You can also import WSDL declarations from HTTP urls – this means you can generate and entire object model by just importing the WSDL.</p>
-
-<p>Note that values redefined in the enclosing project file override the values in the imported project file – so you can add properties and storage options to objects defined externally in a WSDL declaration.</p>
-
-<p>You can define properties for your objects and define how they are stored in structured storage, for example in the screen shot below you can see that the ‘testInt’ property is indexed and that the ‘databaseGuid’ is the primary key.</p>
-
-<blockquote><p>BTW – I owe you documentation describing the FishLamp Object model.</p></blockquote>
-
-<p><img src="/images/packmule-testobject.png" alt="" /></p>
-
-<p>And here’s a screenshot of the header that whittle generated:</p>
-
-<p><img src="/images/generated-header.png" alt="" /></p>
+<p><a href="/whittle.html">Whittle</a> is the command line tool for generating code (on Mac OS X).</p>
 
   
 </article>
