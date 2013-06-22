@@ -1,0 +1,57 @@
+---
+layout: post
+title: Custom XCode Project Templates
+tags:
+- Xcode
+status: publish
+type: post
+published: true
+meta:
+  fb_status_messages: a:0:{}
+  _wp_jd_url: http://blog.fishlamp.com/2012/09/12/custom-xcode-project-templates/
+  _wp_jd_target: http://blog.fishlamp.com/2012/09/12/custom-xcode-project-templates/
+  _jd_wp_twitter: a:1:{i:0;s:98:"Custom XCode Project Templates http://blog.fishlamp.com/2012/09/12/custom-xcode-project-templates/";}
+  _wpt_failed: a:5:{s:6:"author";s:0:"";s:8:"sentence";s:98:"Custom XCode Project
+    Templates http://blog.fishlamp.com/2012/09/12/custom-xcode-project-templates/";s:5:"error";s:71:"This
+    tweet is identical to another Tweet recently sent to this account.";s:4:"code";s:3:"403";s:9:"timestamp";s:10:"1347489038";}
+  _yoast_wpseo_linkdex: '0'
+  _yoast_wpseo_meta-robots-noindex: '0'
+  _yoast_wpseo_metadesc: ''
+  _yoast_wpseo_title: ''
+  _yoast_wpseo_focuskw: ''
+  _dm_data: a:2:{s:15:"dm-primary-menu";s:6:"#NONE#";s:11:"dm-top-menu";s:6:"#NONE#";}
+  _edit_last: '1'
+  _yoast_wpseo_meta-robots-nofollow: '0'
+  _yoast_wpseo_meta-robots-adv: none
+  _yoast_wpseo_sitemap-include: ! '-'
+  _yoast_wpseo_sitemap-prio: ! '-'
+  _yoast_wpseo_canonical: ''
+  _yoast_wpseo_redirect: ''
+  _yoast_wpseo_opengraph-description: ''
+  _yoast_wpseo_google-plus-description: ''
+  image: ''
+  _image_alignment: c
+  _layout: layout-default
+  _wpas_skip_3645287: '1'
+  _wpas_skip_3645284: '1'
+---
+Well, this is a bit of voodoo since Apple has NOT documented the custom template format. Fortunately, other people have been reverse engineering this already.
+
+I've created a few new templates myself, but I'm unable to figure out a couple of things so far:
+<ol>
+	<li>How to add a dependency on an external project (e.g. a super project that creates a static lib that I want to consume)</li>
+	<li>Custom build configuration, e.g. adhoc or test. They seem to be there in the targets, but not the projects, so that's not quite helping. Edit: that said, it's suddenly now working.</li>
+	<li>How to link with a dynamic library</li>
+</ol>
+Here's the best resources I've found on figuring this stuff out:
+<ol>
+	<li><a href="http://www.learn-cocos2d.com/store/xcode4-template-documentation/">This is the best resource.</a> It's from the Cocos2d folks and costs $10.00, but it's worth every penny. I've been reading it and rereading it all afternoon.</li>
+	<li><a href="https://snipt.net/yonishin/about-xcode-4-project-template/">About XCode 4 Project Template (How To Create Custom Project Template)</a></li>
+	<li><a href="https://github.com/davidmorford/BuildKit/tree/master/Support/Xcode/Templates/BuildKit%20iOS%20Application.xctemplate">A good example of a templateInfo.plist file that helped me</a></li>
+	<li><a href="http://www.bobmccune.com/2012/03/04/creating-custom-xcode-4-file-templates/">A very nice overview</a></li>
+	<li><a href="http://blog.boreal-kiss.net/2011/03/11/a-minimal-project-template-for-xcode-4/">A recipe for creating a minimal project template</a></li>
+</ol>
+Some interesting stuff that wasn't obvious to me:
+<ol>
+	<li>Project templates can also be used for creating targets. The "projects" settings in the templateinfo.plist aren't used when making a new project in Xcode.</li>
+</ol>
