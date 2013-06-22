@@ -12,6 +12,7 @@ This is the help site for the FishLamp SDK.
 ###General Information 
 
 - [File and Folder Organization](/organization.html)
+- [How to get the code](/how-to-get-the-code.html)
 
 ###About the source code
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: FishLamp Overview
+title: How To Get The Code
 ---
 
 Here's how the repository is organized: [File Topology](/organization.html)

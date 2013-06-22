@@ -5,47 +5,43 @@ title: FishLamp Repository Topology
 
 ###Files at the Root:
 
-- .fishlamp-root:   
+1. .fishlamp-root:   
 This is an invisible file that the build scripts use to locate the framework.
 
-- .gitmodules:   
+2. .gitmodules:   
 List of submodules used by the framework, like cocos2d
 
-- LICENSE:   
+3. LICENSE:   
 The MIT license file
 
-- README.MD:   
+4. README.MD:   
 Like, read me. Like. Totally.
 
-- Version.plist:   
-This is a plist that has the current version of the framework in it. This will be in sync with tagged releases of the framework in the master branch. All of the tools will be set to the same version, this way if you're working with v3.0.125, PackMule will be the same version.
+5. Version.plist:   
+This is a plist that has the current version of the framework in it. This will be in sync with tagged releases of the framework in the master branch. All of the tools will be set to the same version, this way if you're working with v3.0.0.125, PackMule will be the same version.
 
+6. FishLamp.xcodeProject  
+This is a Xcode project that contains everything. You can build the various libraries from here. You can include this library in your project and have your project build the libraries you need as needed, etc.
 
-###Classes
+7. FishLamp.xcworkspace  
+This Xcode workspace contains the FishLamp.xcodeProject.
+
+###Frameworks
 
 This is where all the source code lives. See the organization for this folder [here](/files.html).
 
-###Experimental
+###Scripts
 
-This is where a bunch of random stuff is. Soon to be moved into it's own repo.
-
-###Graveyard
-
-This is dead stuff. Also soon to be removed.
-
-###Resources
-
-Images and nib files. These need a better place to live. 
+Scripts for working with FishLamp. More info here [here](/scripts.html).
 
 ###Tools
 
-Source code for the tools and scripts. See the tools section [here](/tools.html).
-
-###XcodeSupport
-
-Stuff for Xcode. Lots of scripts, config files, and projects. For more information go [here](/xcode.html).
+Source code for the tools, including PackMule and Whittle. See the tools section [here](/tools.html).
 
 ###Submodules
 
 We need to put our submodule dependencies somewhere. Instead of confusing things by putting them at the root of the repo, we'll put them here for clarity.
 
+###Deprecated
+
+This is where a bunch of random stuff is. Soon to be moved into it's own repo. You can ignore this.
