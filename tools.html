@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Custom XCode Project Templates - FishLamp</title>
+  <title>Tools - FishLamp</title>
   <meta name="author" content="FishLamp">
 
   
-  <meta name="description" content="Well, this is a bit of voodoo since Apple has NOT documented the custom template format. Fortunately, other people have been reverse engineering this &hellip;">
+  <meta name="description" content="Tools Jun 22nd, 2013 PackMule is the cocoa App for generating code. Whittle is the command line tool for generating code (on Mac OS X). Recent Posts &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://fishlamp.github.io/blog/2012/09/12/custom-xcode-project-templates">
+  <link rel="canonical" href="http://fishlamp.github.io/tools.html">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="FishLamp" type="application/atom+xml">
@@ -71,15 +71,11 @@
   <div id="main">
     <div id="content">
       <div>
-<article class="hentry" role="article">
+<article role="article">
   
   <header>
-    
-      <h1 class="entry-title">Custom XCode Project Templates</h1>
-    
-    
-      <p class="meta">
-        
+    <h1 class="entry-title">Tools</h1>
+    <p class="meta">
 
 
 
@@ -91,79 +87,14 @@
   
 
 
-<time datetime="2012-09-12T00:00:00-07:00" pubdate data-updated="true">Sep 12<span>th</span>, 2012</time>
-        
-      </p>
-    
+<time datetime="2013-06-22T14:05:00-07:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2013</time></p>
   </header>
-
-
-<div class="entry-content">Well, this is a bit of voodoo since Apple has NOT documented the custom template format. Fortunately, other people have been reverse engineering this already.
-
-I&#8217;ve created a few new templates myself, but I&#8217;m unable to figure out a couple of things so far:
-<ol>
-	<li>How to add a dependency on an external project (e.g. a super project that creates a static lib that I want to consume)</li>
-	<li>Custom build configuration, e.g. adhoc or test. They seem to be there in the targets, but not the projects, so that&#8217;s not quite helping. Edit: that said, it&#8217;s suddenly now working.</li>
-	<li>How to link with a dynamic library</li>
-</ol>
-Here&#8217;s the best resources I&#8217;ve found on figuring this stuff out:
-<ol>
-	<li><a href="http://www.learn-cocos2d.com/store/xcode4-template-documentation/">This is the best resource.</a> It&#8217;s from the Cocos2d folks and costs $10.00, but it&#8217;s worth every penny. I&#8217;ve been reading it and rereading it all afternoon.</li>
-	<li><a href="https://snipt.net/yonishin/about-xcode-4-project-template/">About XCode 4 Project Template (How To Create Custom Project Template)</a></li>
-	<li><a href="https://github.com/davidmorford/BuildKit/tree/master/Support/Xcode/Templates/BuildKit%20iOS%20Application.xctemplate">A good example of a templateInfo.plist file that helped me</a></li>
-	<li><a href="http://www.bobmccune.com/2012/03/04/creating-custom-xcode-4-file-templates/">A very nice overview</a></li>
-	<li><a href="http://blog.boreal-kiss.net/2011/03/11/a-minimal-project-template-for-xcode-4/">A recipe for creating a minimal project template</a></li>
-</ol>
-Some interesting stuff that wasn&#8217;t obvious to me:
-<ol>
-	<li>Project templates can also be used for creating targets. The &#8220;projects&#8221; settings in the templateinfo.plist aren&#8217;t used when making a new project in Xcode.</li>
-</ol>
-</div>
-
-
-  <footer>
-    <p class="meta">
-      
   
+  <p><a href="/packmule.html">PackMule</a> is the cocoa App for generating code.</p>
 
-<span class="byline author vcard">Posted by <span class="fn">FishLamp</span></span>
-
-      
-
-
-
-
-
-
-
+<p><a href="/whittle.html">Whittle</a> is the command line tool for generating code (on Mac OS X).</p>
 
   
-
-
-<time datetime="2012-09-12T00:00:00-07:00" pubdate data-updated="true">Sep 12<span>th</span>, 2012</time>
-      
-
-
-    </p>
-    
-      <div class="sharing">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://fishlamp.github.io/blog/2012/09/12/custom-xcode-project-templates/" data-via="fishlampsdk" data-counturl="http://fishlamp.github.io/blog/2012/09/12/custom-xcode-project-templates/" >Tweet</a>
-  
-  
-  
-</div>
-
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/2012/09/08/xcode-environment-variables/" title="Previous Post: Xcode Environment Variables">&laquo; Xcode Environment Variables</a>
-      
-      
-        <a class="basic-alignment right" href="/blog/2013/05/02/tumbleweed-and-crickets/" title="Next Post: Tumbleweed and Crickets">Tumbleweed and Crickets &raquo;</a>
-      
-    </p>
-  </footer>
 </article>
 
 </div>
