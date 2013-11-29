@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<title>{{ page.title }}</title>
+        
+    <link rel="stylesheet" href="{{ site.baseurl }}css/styles.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}css/pygment_trac.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}css/syntax.css">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script>
+
+    	function assert(obj, str) {
+    		if(!obj) {
+				console.log(str);
+    		}
+    	}
+    
+// 		var github = new Github({ username: "mybuildbot" });
+// 		assert(github, "github not loaded");
+// 		
+// //     		console.log(github().API_URL);
+// 		
+// 		var user = github.getUser();
+// 		assert(user, "user not loaded");
+
+    	
+    	
+    
+    	function showStatus() {
+
+    	
+			var github = new Github({ username: "mybuildbot" });
+			assert(github, "github not loaded");
+    		
+//     		console.log(github().API_URL);
+    		
+			var user = github.getUser();
+			assert(user, "user not loaded");
+			
+			
+			function showOrg(orgName) {
+    			
+    			document.getElementById("repo-links").innerHTML = "loading repos...";
+    	
+				user.orgRepos(orgName, function(err, repos) {
+					if(!err) {
+						document.getElementById("repo-links").innerHTML = "";
+						var list = document.getElementById("repo-links").innerHTML;
+						for(var i = 0; i < repos.length; i++) {
+							var r = repos[i];
+							list += "<a href=\"" + r.url + "\">" + r.name + "</a><br/>";
+						}
+				
+						document.getElementById("repo-links").innerHTML=list;
+					}
+				});
+    		}
+    		
+    		showOrg("fishlamp-objc");
+			
+			
+// 			alert("hello");
+// 
+//     		repo.API_URL = "https://github.paypal.com/api/v3/";
+//     		alert(repo.API_URL);
+//     		
+    		
+    		
+    	}
+    </script>
+  </head>
+  <body onload="showStatus()">
+    <div class="wrapper">
+      <header>
+      
+        <h1 class="title"><a href="{{ site.baseurl }}">{{ site.name }}</a></h1>
+		<p>{{ content }}</p>
+
+		<div id="repo-links">
+		
+		</div>
+
+<!-- 
+	    <a class="extra" href="{{ site.baseurl }}">home</a>
+		<h4>View the Projects on GitHub:</h4>
+		<div class="topic">
+			<a href="https://github.paypal.com/iOS/foundation">iOS/foundation</a><br/>
+			<a href="https://github.paypal.com/andriod/foundation">android/foundation</a><br/>
+		</div>
+ -->
+
+		<br/>
+
+		<h4>Announcements:</h4>
+		<ul class="posts">
+			{% for post in site.posts %}
+			  <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endfor %}
+		</ul>
+		
+      </header>
+      <section>
+	
+	  </section>
+      
+      <footer>
+        <p>This project is maintained by <a href="https://https://github.com/fishlamp">FishLamp</a></p>
+
+            <div class="contact">
+              <p>
+                <a href="https://github.com/mikefullerton">Mike Fullerton</a><br />
+              </p>
+            </div>
+        
+      </footer>
+    </div>
+<!--     <script src="{{ site.baseurl }}scripts/scale.fix.js"></script> -->
+	<script src="{{ site.baseurl }}scripts/lib/underscore-min.js"></script>
+	<script src="{{ site.baseurl }}scripts/lib/base64.js"></script>
+    <script src="{{ site.baseurl }}scripts/github.js"></script>
+	<script src="{{ site.baseurl }}scripts/status-display.js"></script> -->
+
+    
+  </body>
+</html>
