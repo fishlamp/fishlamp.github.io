@@ -37,7 +37,7 @@
     	function showStatus() {
 
     	
-			var github = new Github({ username: "mybuildbot" });
+			var github = new Github({ token: "56507e38fe143f52a38b9408d52e15a9616bac20" });
 			assert(github, "github not loaded");
     		
 //     		console.log(github().API_URL);
@@ -46,22 +46,38 @@
 			assert(user, "user not loaded");
 			
 			
-			function showOrg(orgName) {
-    			
-    			document.getElementById("repo-links").innerHTML = "loading repos...";
+			function showReposForOrg(org) {
+				document.getElementById("repo-links").innerHTML = "loading repos...";
     	
-				user.orgRepos(orgName, function(err, repos) {
+				user.orgRepos(org.login, function(err, repos) {
+					document.getElementById("repo-links").innerHTML =  "<h4><a href=\"" + org.html_url + "\">" + org.name + "</a>" + " repos:" + "</h4>"; 
 					if(!err) {
-						document.getElementById("repo-links").innerHTML = "";
 						var list = document.getElementById("repo-links").innerHTML;
 						for(var i = 0; i < repos.length; i++) {
 							var r = repos[i];
-							list += "<a href=\"" + r.url + "\">" + r.name + "</a><br/>";
+							
+							if(r.name.indexOf("fishlamp") >= 0) {
+								list += "<div class=\"repo-link\"><a href=\"" + r.url + "\">" + r.name + "</a></div>";
+							}
 						}
 				
 						document.getElementById("repo-links").innerHTML=list;
 					}
+					else {
+						console.log(err);
+					}
 				});
+			}
+			
+			function showOrg(orgName) {
+    			github.getOrg(orgName, function(err, org) {
+    				if(!err) {
+    					showReposForOrg(org);
+    				}
+    				else {
+    					console.log(err);
+    				}
+     			});
     		}
     		
     		showOrg("fishlamp-objc");
@@ -88,15 +104,6 @@
 		
 		</div>
 
-<!-- 
-	    <a class="extra" href="{{ site.baseurl }}">home</a>
-		<h4>View the Projects on GitHub:</h4>
-		<div class="topic">
-			<a href="https://github.paypal.com/iOS/foundation">iOS/foundation</a><br/>
-			<a href="https://github.paypal.com/andriod/foundation">android/foundation</a><br/>
-		</div>
- -->
-
 		<br/>
 
 		<h4>Announcements:</h4>
@@ -108,7 +115,7 @@
 		
       </header>
       <section>
-	
+		<div id="status-box"></div>
 	  </section>
       
       <footer>
@@ -123,10 +130,10 @@
       </footer>
     </div>
 <!--     <script src="{{ site.baseurl }}scripts/scale.fix.js"></script> -->
-	<script src="{{ site.baseurl }}scripts/lib/underscore-min.js"></script>
-	<script src="{{ site.baseurl }}scripts/lib/base64.js"></script>
-    <script src="{{ site.baseurl }}scripts/github.js"></script>
-	<script src="{{ site.baseurl }}scripts/status-display.js"></script> -->
+	<script src="{{ site.baseurl }}submodules/github/lib/underscore-min.js"></script>
+	<script src="{{ site.baseurl }}submodules/github/lib/base64.js"></script>
+    <script src="{{ site.baseurl }}submodules/github/github.js"></script>
+	<script src="{{ site.baseurl }}scripts/status-display.js"></script>
 
     
   </body>
