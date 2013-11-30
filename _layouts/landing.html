@@ -15,6 +15,8 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     
+     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
     <script>
 
     	function assert(obj, str) {
@@ -35,7 +37,31 @@
     	
     
     	function showStatus() {
+    	
+			var github = new Github({ token: "56507e38fe143f52a38b9408d52e15a9616bac20" });
+			assert(github, "github not loaded");
+	
+		//     		console.log(github().API_URL);
+	
+			var user = github.getUser();
+			assert(user, "user not loaded");
 
+			var repo = github.getRepo("fishlamp-objc", "fishlamp-core");
+	
+			repo.read("build-status", "last.json", function(err, file) {
+				if(err) {
+					console.log(err);
+				}
+				else {
+				
+					var buildStatus = jQuery.parseJSON(file);
+				
+					document.getElementById("repo-status-box").innerHTML = buildStatus.result.tag + "<br/><img src=\"" + buildStatus.result.url + "\"/>";
+    		
+				}
+			});    	
+    	
+			return;
     	
 			var github = new Github({ token: "56507e38fe143f52a38b9408d52e15a9616bac20" });
 			assert(github, "github not loaded");
@@ -115,7 +141,38 @@
 		
       </header>
       <section>
-		<div id="status-box"></div>
+		<div id="repo-status-box"></div>
+		<div id="images"></div>
+<script>
+(function() {
+
+
+
+// 	var result = "https://raw.github.com/fishlamp-objc/fishlamp-core/build-status/history/2013-11-29-15-19-33.json";
+// 	$.getJSON(result, {})
+// 		.done(function(data) {
+// 			console.log(data.id)
+// 		});
+
+
+//   var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+//   $.getJSON( flickerAPI, {
+//     tags: "mount rainier",
+//     tagmode: "any",
+//     format: "json"
+//   })
+//     .done(function( data ) {
+//       $.each( data.items, function( i, item ) {
+//         $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+//         if ( i === 3 ) {
+//           return false;
+//         }
+//       });
+//     });
+
+})();
+</script>
+		
 	  </section>
       
       <footer>
