@@ -54,9 +54,15 @@
 				}
 				else {
 				
-					var buildStatus = jQuery.parseJSON(file);
+					var status = jQuery.parseJSON(file);
+					
+					if( status.result.failed ) {
+						document.getElementById("repo-status-box").innerHTML = "<img src=\"" + status.result.fail + "\"/>";
+					}
+					else {
+						document.getElementById("repo-status-box").innerHTML = "<img src=\"" + status.result.pass + "\"/>";
+					}
 				
-					document.getElementById("repo-status-box").innerHTML = buildStatus.result.tag + "<br/><img src=\"" + buildStatus.result.url + "\"/>";
     		
 				}
 			});    	
