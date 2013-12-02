@@ -1,13 +1,72 @@
----
-layout: default
-title: Your New Jekyll Site
----
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Fishlamp.github.io by fishlamp</title>
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Fishlamp.github.io</h1>
+        <p>organization webpage</p>
+
+
+        <p class="view"><a href="https://github.com/fishlamp">View My GitHub Profile</a></p>
+
+      </header>
+      <section>
+        <h3>
+<a name="welcome-to-the-fishlamp-homepage" class="anchor" href="#welcome-to-the-fishlamp-homepage"><span class="octicon octicon-link"></span></a>Welcome to the FishLamp homepage.</h3>
+
+<p>FishLamp is a collection of small collections of code I call pieces - these pieces are meant to be aggregated together into your project. Each piece is meant to solve a specific problem or implement a specific feature. FishLamp is not meant to be monolithic. </p>
+
+<p>You consume and use these pieces using the awesome <a href="http://cocoapods.org">CococPods</a> tools. (Note, I'm still working on wiring everything up to cocoapods, so we're not quite fully integrated yet).</p>
+
+<h3>
+<a name="pieces" class="anchor" href="#pieces"><span class="octicon octicon-link"></span></a>Pieces</h3>
+
+<p>The pieces are arranged like this:</p>
+
+<p><a href="http://github.com/fishlamp-objc">fishlamp-objc</a></p>
+
+<p>These are the core pieces in objective-c that work on either iOS or OSX.</p>
+
+<p><a href="http://github.com/fishlamp-osx">fishlamp-osx</a></p>
+
+<p>These are the pieces specifically for OSX.</p>
+
+<p><a href="http://github.com/fishlamp-osx">fishlamp-osx</a></p>
+
+<p>These are the pieces specifically for iOS.</p>
+
+<h3>
+<a name="getting-the-code" class="anchor" href="#getting-the-code"><span class="octicon octicon-link"></span></a>Getting the code</h3>
+
+<pre><code>$ cd your_repo_root/repo_name
+$ git fetch origin
+$ git checkout gh-pages
+</code></pre>
+
+<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+
+<h3>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>My name is (Mike Fullerton)[<a href="http://www.mikefullerton.com">http://www.mikefullerton.com</a>]. I've been working on FishLamp for a number of years now and am working toward the first fully open sourced release. If you're interested in finding out more, please shoot me an email at <a href="http://hello@fishlamp.com">hello@fishlamp.com</a>.</p>
+      </section>
+      <footer>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
